@@ -1,0 +1,12 @@
+Well done!
+
+4
+a) -0.25
+The condition was not "not equal", it was "not including".
+Also, if it's asked to show COUNT, then it would be more correct to have COUNT in the SELECT.
+
+e) -0.75
+Color is not asked in the select and it will lead to cancel it in th GROUP BY.
+Also, NULL should be compared only with the "IS NOT NULL" filter.
+
+Mark: 9
