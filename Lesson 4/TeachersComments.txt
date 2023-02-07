@@ -1,0 +1,18 @@
+Well done!
+
+4
+a)
+Please, if it's asked to show "how many", you should show the count, not all the values.
+
+g) -2
+SOlutions can be found in the google.
+My solution:
+SELECT DATEADD(DAY, 1, EOMONTH(GETDATE(), -1)) AS first_day_of_month,
+		--CONVERT(DATE, DATEADD(DAY, -DATEPART(DAY,GETDATE())+1 ,GETDATE())) AS optional_way,
+		DATEPART(DW, DATEADD(DAY, 1, EOMONTH(GETDATE(), -1))) AS [it's number],
+		CASE WHEN DATEPART(DW, DATEADD(DAY, 1, EOMONTH(GETDATE(), -1)))<=5 
+				THEN DATEADD(DAY, 1, EOMONTH(GETDATE(), -1))
+		ELSE DATEADD(DAY, (7-DATEPART(DW, DATEADD(DAY, 1, EOMONTH(GETDATE(), -1)))+1), DATEADD(DAY, 1, EOMONTH(GETDATE(), -1))) 
+		END AS first_working_day
+    
+Mark: 8
